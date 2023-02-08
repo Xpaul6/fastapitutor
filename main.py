@@ -35,7 +35,7 @@ app = FastAPI()
 async def index():
     return {'index':'page'}
 
-@app.get('/get-meme')
+@app.get('/get-meme/{meme_id}')
 async def get_meme(meme_id: int = None):
     return dick[meme_id]
 
@@ -50,7 +50,7 @@ async def get_memes(number_of_memes: int):
 async def get_tools_list():
     return tools
 
-@app.post('/add-tool/{tool_id}')
+@app.post('/add-tool')
 async def add_tool(tool_id: int, tool: Tool):
     if tool_id in tools:
         return {'Error':'baka'}
