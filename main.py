@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 
@@ -55,4 +55,4 @@ async def add_tool(tool_id: int, tool: Tool):
     if tool_id in tools:
         return {'Error':'baka'}
     tools[tool_id] = tool
-    return {'Success':''}
+    return HTTPException(status_code=200, detail='Success')
