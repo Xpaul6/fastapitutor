@@ -30,7 +30,7 @@ try:
         #with connection.cursor() as cursor:
         #    inputname = input('Name>>> ')
         #    inputfaculty = input('Faculty>>> ')
-        #   insertData = f'INSERT INTO `student`(name, faculty) VALUES ("{inputname}", "{inputfaculty}")'
+        #    insertData = f'INSERT INTO `student`(name, faculty) VALUES ("{inputname}", "{inputfaculty}")'
         #    cursor.execute(insertData)
         #    connection.commit()
         #    print('Data inserted successfully')
@@ -51,4 +51,3 @@ try:
 except Exception as ex:
     print('Connection failed')
     print(ex)
-
