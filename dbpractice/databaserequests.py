@@ -1,5 +1,3 @@
-from pymysql.cursors import DictCursor
-
 def get_students(connection):
     with connection.cursor() as cursor:
         getAllStudents = 'SELECT * FROM student'
