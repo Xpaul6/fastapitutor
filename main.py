@@ -1,12 +1,7 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
 from data import dick, tools
+from models import Tool
 
-
-class Tool(BaseModel):
-    name: str
-    size: int
-    material: str
 
 app = FastAPI()
 
