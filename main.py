@@ -1,28 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+from data import dick, tools
 
-
-dick = {
-    1:'bruh',
-    2:'lol',
-    3:'lmao',
-    4:'cringe'
-}
-
-tools = {
-    1: {
-        'name': 'skrewdriver',
-        'size': 15,
-        'material': 'steel'
-    },
-
-    2: {
-        'name': 'drill',
-        'size': 20,
-        'material': 'aluminium'
-    }
-
-}
 
 class Tool(BaseModel):
     name: str
