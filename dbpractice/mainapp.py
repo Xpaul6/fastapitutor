@@ -5,7 +5,6 @@ from pymysql.cursors import DictCursor
 import databaserequests
 
 
-
 app = FastAPI()
 connection = pymysql.connect(
         host = host,
