@@ -10,6 +10,10 @@ class Student(BaseModel):
 
 app = FastAPI()
 
+@app.get('/')
+async def index():
+    return {'index':'page'}
+
 @app.get('/get-students')
 async def get_students():
     return databaserequests.get_students(connection)
